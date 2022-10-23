@@ -1,6 +1,5 @@
 import React from "react";
-
-const Book = ({ data, onBookUpdate = () => null }) => {
+const Book = ({ data, shelf, onBookUpdate = () => null }) => {
   return (
     <div className="book">
       <div className="book-top">
@@ -14,7 +13,7 @@ const Book = ({ data, onBookUpdate = () => null }) => {
         ></div>
         <div className="book-shelf-changer">
           <select
-            value={data?.shelf || "none"}
+            value={shelf || data?.shelf || "none"}
             onChange={(e) => onBookUpdate(data, e.target.value)}
           >
             <option value="none" disabled>
