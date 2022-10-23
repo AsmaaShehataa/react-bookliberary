@@ -21,25 +21,28 @@ const Search = () => {
     let newBooks;
 
     if (isAdd) {
+        console.log(isAdd)
       // add new book from search result to my books and set it's shelf to the selected one
       const newBook = { ...book, shelf };
       newBooks = [...books, newBook];
 
       // remove this book from search result
-      setSearchBooks(searchBooks.filter((b) => b.id !== book.id));
+     // let filteredItems = searchBooks.filter((b) => b.id !== book.id)
+     // setSearchBooks(filteredItems.length ? filteredItems: []);
+     setSearchBooks(newBooks)
     } else {
       // update currently added book from shelf to other shelf
-      newBooks = books.map((b) => {
+     /* newBooks = books.map((b) => {
         if (b.id === book.id) {
           b.shelf = shelf;
         }
 
         return b;
-      });
+      });*/
     }
 
     // update my books list
-    setBooks(newBooks);
+    //setBooks(newBooks);
   };
 
   // on search input change
@@ -52,6 +55,7 @@ const Search = () => {
     // check if result is array before updating the search result state
     if (result && result.length) setSearchBooks(result);
     else setSearchBooks([]);
+    console.log("==",searchBooks)
   };
   return (
       <div className="search-books">

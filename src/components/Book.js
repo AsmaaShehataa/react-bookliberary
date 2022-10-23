@@ -9,12 +9,12 @@ const Book = ({ data, onBookUpdate = () => null }) => {
           style={{
             width: 128,
             height: 193,
-            backgroundImage: `url("${data.imageLinks.thumbnail}")`,
+            backgroundImage: `url("${data?.imageLinks ? data.imageLinks.thumbnail: ''}")`,
           }}
         ></div>
         <div className="book-shelf-changer">
           <select
-            value={data.shelf || "none"}
+            value={data?.shelf || "none"}
             onChange={(e) => onBookUpdate(data, e.target.value)}
           >
             <option value="none" disabled>
