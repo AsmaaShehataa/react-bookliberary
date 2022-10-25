@@ -68,3 +68,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+#################### README- Asmaa  #################
+
+This project started with Npm start; I have created the following;
+App.js --> contians routes of home and search routes 
+
+I have created 3 components related to the application 
+
+- Home.js --> Contians of 3 shelfs and books with each book status 
+
+- Search.js --> Contians of home stack of books with each book status and the status 
+'none' for the other books which are not assigned to any othe shelf 
+
+- Book.js the home page was deigned for the book shelfs ( currently reading, 
+want to read, and read )
+
+The application and the code functioninng are up and running 

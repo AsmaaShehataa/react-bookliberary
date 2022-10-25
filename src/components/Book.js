@@ -16,7 +16,7 @@ const Book = ({ data, shelf, onBookUpdate = () => null }) => {
             value={shelf || data?.shelf || "none"}
             onChange={(e) => onBookUpdate(data, e.target.value)}
           >
-            <option value="none" disabled>
+            <option value="empty" disabled>
               Move to...
             </option>
             <option value="currentlyReading">Currently Reading</option>
